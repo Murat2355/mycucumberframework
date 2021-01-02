@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="5" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="12" time="486.037">
+<testcase classname="US1005_Walmart_parameter_arama" name="TC07_aranan_kelime_title’da_olmali" time="99.901">
+<system-out><![CDATA[When kullanici walmart ana sayfaya gider....................................passed
+Then walmart sayfasinda "Nutella" icin arama yapar..........................passed
+Then walmartta sayfa basliginin "Nutella" icerdigini test eder..............passed
+And kullanici sayfayi kapatir...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1005_Walmart_parameter_arama" name="TC07_aranan_kelime_title’da_olmali_2" time="34.351">
+<system-out><![CDATA[When kullanici walmart ana sayfaya gider....................................passed
+Then walmart sayfasinda "pencil" icin arama yapar...........................passed
+Then walmartta sayfa basliginin "pencil" icerdigini test eder...............passed
+And kullanici sayfayi kapatir...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1005_Walmart_parameter_arama" name="TC07_aranan_kelime_title’da_olmali_3" time="92.102">
+<system-out><![CDATA[When kullanici walmart ana sayfaya gider....................................passed
+Then walmart sayfasinda "tomatoes" icin arama yapar.........................passed
+Then walmartta sayfa basliginin "tomatoes" icerdigini test eder.............passed
+And kullanici sayfayi kapatir...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1005_Walmart_parameter_arama" name="TC07_aranan_kelime_title’da_olmali_4" time="45.697">
+<system-out><![CDATA[When kullanici walmart ana sayfaya gider....................................passed
+Then walmart sayfasinda "popcorn" icin arama yapar..........................passed
+Then walmartta sayfa basliginin "popcorn" icerdigini test eder..............passed
+And kullanici sayfayi kapatir...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1006_Dinamik_url_test" name="TC08_her_url’e_gitmeli" time="20.013">
+<system-out><![CDATA[When kullanici "amazon_url" anasayfaya gider................................passed
+Then "amazon_url" de oldugunu test eder.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1006_Dinamik_url_test" name="TC08_her_url’e_gitmeli_2" time="9.337">
+<system-out><![CDATA[When kullanici "bestbuy_url" anasayfaya gider...............................passed
+Then "bestbuy_url" de oldugunu test eder....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1006_Dinamik_url_test" name="TC08_her_url’e_gitmeli_3" time="56.472">
+<system-out><![CDATA[When kullanici "walmart_url" anasayfaya gider...............................passed
+Then "walmart_url" de oldugunu test eder....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1007_kullanici_data_ekleyebilmeli" name="TC09_5_farkli_kisi_ile_farkli_kombinasyonlari_calismali" time="35.659">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//td[@class='sorting_1'])[1]&quot;}&#10;  (Session info: chrome=87.0.4280.88)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'DESKTOP-MBT4DSN', ip: '192.168.1.121', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\Casper\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:53596}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: cea606b30e5a5825bdd994391e220ac1&#10;*** Element info: {Using=xpath, value=(//td[@class='sorting_1'])[1]}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[When kullanici "datatable_url" anasayfaya gider.............................passed
+Then new butonuna basar.....................................................passed
+And first name girer "Murat"................................................passed
+And "1" saniye bekler.......................................................passed
+And Last name girer "Ozben".................................................passed
+And Position girer "QA".....................................................passed
+And Office girer "Tech".....................................................passed
+And Extention girer "Dr"....................................................passed
+And Start date girer "2020-12-23"...........................................passed
+And Salary girer "12000"....................................................passed
+When kullanici "Murat" ile arama yapar......................................passed
+Then isim bolumunde "Murat" oldugunu dogrular...............................failed
+And kullanici sayfayi kapatir...............................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//td[@class='sorting_1'])[1]"}
+  (Session info: chrome=87.0.4280.88)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-MBT4DSN', ip: '192.168.1.121', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\Casper\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:53596}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: cea606b30e5a5825bdd994391e220ac1
+*** Element info: {Using=xpath, value=(//td[@class='sorting_1'])[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy18.getText(Unknown Source)
+	at stepdefinitions.DataTablesStepDefinitions.isimBolumundeOldugunuDogrular(DataTablesStepDefinitions.java:71)
+	at ✽.isim bolumunde "Murat" oldugunu dogrular(file:///C:/Users/Casper/IdeaProjects/mycucumberframework/src/test/resources/features/US1007_kullanici_data_ekleyebilmeli.feature:17)
+]]></failure>
+</testcase>
+<testcase classname="US1007_kullanici_data_ekleyebilmeli" name="TC09_5_farkli_kisi_ile_farkli_kombinasyonlari_calismali_2" time="31.138">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//td[@class='sorting_1'])[1]&quot;}&#10;  (Session info: chrome=87.0.4280.88)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'DESKTOP-MBT4DSN', ip: '192.168.1.121', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\Casper\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:53725}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 7a955b1fa14b18f781bdcf8f9e8726fb&#10;*** Element info: {Using=xpath, value=(//td[@class='sorting_1'])[1]}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[When kullanici "datatable_url" anasayfaya gider.............................passed
+Then new butonuna basar.....................................................passed
+And first name girer "Ahmet"................................................passed
+And "1" saniye bekler.......................................................passed
+And Last name girer "Kartal"................................................passed
+And Position girer "manager"................................................passed
+And Office girer "Tech".....................................................passed
+And Extention girer "Dr"....................................................passed
+And Start date girer "2020-12-23"...........................................passed
+And Salary girer "6500".....................................................passed
+When kullanici "Ahmet" ile arama yapar......................................passed
+Then isim bolumunde "Ahmet" oldugunu dogrular...............................failed
+And kullanici sayfayi kapatir...............................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//td[@class='sorting_1'])[1]"}
+  (Session info: chrome=87.0.4280.88)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-MBT4DSN', ip: '192.168.1.121', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\Casper\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:53725}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 7a955b1fa14b18f781bdcf8f9e8726fb
+*** Element info: {Using=xpath, value=(//td[@class='sorting_1'])[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy18.getText(Unknown Source)
+	at stepdefinitions.DataTablesStepDefinitions.isimBolumundeOldugunuDogrular(DataTablesStepDefinitions.java:71)
+	at ✽.isim bolumunde "Ahmet" oldugunu dogrular(file:///C:/Users/Casper/IdeaProjects/mycucumberframework/src/test/resources/features/US1007_kullanici_data_ekleyebilmeli.feature:17)
+]]></failure>
+</testcase>
+<testcase classname="US1007_kullanici_data_ekleyebilmeli" name="TC09_5_farkli_kisi_ile_farkli_kombinasyonlari_calismali_3" time="19.578">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//td[@class='sorting_1'])[1]&quot;}&#10;  (Session info: chrome=87.0.4280.88)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'DESKTOP-MBT4DSN', ip: '192.168.1.121', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\Casper\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:53761}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 20af0ae6a250a79f5c8c1fd818861a02&#10;*** Element info: {Using=xpath, value=(//td[@class='sorting_1'])[1]}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[When kullanici "datatable_url" anasayfaya gider.............................passed
+Then new butonuna basar.....................................................passed
+And first name girer "Mehmet"...............................................passed
+And "1" saniye bekler.......................................................passed
+And Last name girer "Sahin".................................................passed
+And Position girer "TESTER".................................................passed
+And Office girer "Tech".....................................................passed
+And Extention girer "Dr"....................................................passed
+And Start date girer "2020-12-23"...........................................passed
+And Salary girer "60050"....................................................passed
+When kullanici "Mehmet" ile arama yapar.....................................passed
+Then isim bolumunde "Mehmet" oldugunu dogrular..............................failed
+And kullanici sayfayi kapatir...............................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//td[@class='sorting_1'])[1]"}
+  (Session info: chrome=87.0.4280.88)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-MBT4DSN', ip: '192.168.1.121', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\Casper\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:53761}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 20af0ae6a250a79f5c8c1fd818861a02
+*** Element info: {Using=xpath, value=(//td[@class='sorting_1'])[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy18.getText(Unknown Source)
+	at stepdefinitions.DataTablesStepDefinitions.isimBolumundeOldugunuDogrular(DataTablesStepDefinitions.java:71)
+	at ✽.isim bolumunde "Mehmet" oldugunu dogrular(file:///C:/Users/Casper/IdeaProjects/mycucumberframework/src/test/resources/features/US1007_kullanici_data_ekleyebilmeli.feature:17)
+]]></failure>
+</testcase>
+<testcase classname="US1007_kullanici_data_ekleyebilmeli" name="TC09_5_farkli_kisi_ile_farkli_kombinasyonlari_calismali_4" time="21.296">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//td[@class='sorting_1'])[1]&quot;}&#10;  (Session info: chrome=87.0.4280.88)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'DESKTOP-MBT4DSN', ip: '192.168.1.121', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\Casper\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:53788}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 7b2f05e954e18ce6d0e0ce9fe9e8b0e7&#10;*** Element info: {Using=xpath, value=(//td[@class='sorting_1'])[1]}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[When kullanici "datatable_url" anasayfaya gider.............................passed
+Then new butonuna basar.....................................................passed
+And first name girer "Ayse".................................................passed
+And "1" saniye bekler.......................................................passed
+And Last name girer "Bulanik"...............................................passed
+And Position girer "SM".....................................................passed
+And Office girer "Tech".....................................................passed
+And Extention girer "Dr"....................................................passed
+And Start date girer "2020-12-23"...........................................passed
+And Salary girer "6000".....................................................passed
+When kullanici "Ayse" ile arama yapar.......................................passed
+Then isim bolumunde "Ayse" oldugunu dogrular................................failed
+And kullanici sayfayi kapatir...............................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//td[@class='sorting_1'])[1]"}
+  (Session info: chrome=87.0.4280.88)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-MBT4DSN', ip: '192.168.1.121', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\Casper\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:53788}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 7b2f05e954e18ce6d0e0ce9fe9e8b0e7
+*** Element info: {Using=xpath, value=(//td[@class='sorting_1'])[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy18.getText(Unknown Source)
+	at stepdefinitions.DataTablesStepDefinitions.isimBolumundeOldugunuDogrular(DataTablesStepDefinitions.java:71)
+	at ✽.isim bolumunde "Ayse" oldugunu dogrular(file:///C:/Users/Casper/IdeaProjects/mycucumberframework/src/test/resources/features/US1007_kullanici_data_ekleyebilmeli.feature:17)
+]]></failure>
+</testcase>
+<testcase classname="US1007_kullanici_data_ekleyebilmeli" name="TC09_5_farkli_kisi_ile_farkli_kombinasyonlari_calismali_5" time="19.762">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//td[@class='sorting_1'])[1]&quot;}&#10;  (Session info: chrome=87.0.4280.88)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'DESKTOP-MBT4DSN', ip: '192.168.1.121', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\Casper\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:53817}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 3330351818815e06ef7a1213bbf2a166&#10;*** Element info: {Using=xpath, value=(//td[@class='sorting_1'])[1]}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[When kullanici "datatable_url" anasayfaya gider.............................passed
+Then new butonuna basar.....................................................passed
+And first name girer "Sevgi"................................................passed
+And "1" saniye bekler.......................................................passed
+And Last name girer "Deniz".................................................passed
+And Position girer "QA lead"................................................passed
+And Office girer "Tech".....................................................passed
+And Extention girer "Dr"....................................................passed
+And Start date girer "2020-12-23"...........................................passed
+And Salary girer "6000".....................................................passed
+When kullanici "Sevgi" ile arama yapar......................................passed
+Then isim bolumunde "Sevgi" oldugunu dogrular...............................failed
+And kullanici sayfayi kapatir...............................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//td[@class='sorting_1'])[1]"}
+  (Session info: chrome=87.0.4280.88)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-MBT4DSN', ip: '192.168.1.121', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\Casper\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:53817}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 3330351818815e06ef7a1213bbf2a166
+*** Element info: {Using=xpath, value=(//td[@class='sorting_1'])[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy18.getText(Unknown Source)
+	at stepdefinitions.DataTablesStepDefinitions.isimBolumundeOldugunuDogrular(DataTablesStepDefinitions.java:71)
+	at ✽.isim bolumunde "Sevgi" oldugunu dogrular(file:///C:/Users/Casper/IdeaProjects/mycucumberframework/src/test/resources/features/US1007_kullanici_data_ekleyebilmeli.feature:17)
+]]></failure>
+</testcase>
+</testsuite>

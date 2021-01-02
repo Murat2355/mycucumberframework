@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>cucumber-jvm-example</td>
+        <td>1</td>
+      <td>01 Jan 2021, 21:49</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">stepdefinitions.AmazonStepDefinitions.flower_icin_arama_yapar()</td>
+              <td>2</td>
+              <td class="duration" data-value="7811500000">7.811</td>
+              <td class="duration" data-value="7811500000">11.611</td>
+              <td class="duration" data-value="15623000000">15.623</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.AmazonStepDefinitions.icin_arama_yapar(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="7537800000">7.537</td>
+              <td class="duration" data-value="7537800000">15.432</td>
+              <td class="duration" data-value="37689000000">37.689</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.AmazonStepDefinitions.iphone_icin_arama_yapar()</td>
+              <td>2</td>
+              <td class="duration" data-value="14999500000">14.999</td>
+              <td class="duration" data-value="14999500000">19.111</td>
+              <td class="duration" data-value="29999000000">29.999</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.AmazonStepDefinitions.kullaniciSayfayiKapatir()</td>
+              <td>18</td>
+              <td class="duration" data-value="791722222">0.791</td>
+              <td class="duration" data-value="791722222">6.477</td>
+              <td class="duration" data-value="14251000000">14.251</td>
+              <td class="failed">61.11%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.AmazonStepDefinitions.kullanici_amazon_anasayfaya_gider()</td>
+              <td>11</td>
+              <td class="duration" data-value="14480181818">14.480</td>
+              <td class="duration" data-value="14480181818">27.682</td>
+              <td class="duration" data-value="159282000000">2:39.282</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.AmazonStepDefinitions.sonucun_flower_icerdigini_test_eder()</td>
+              <td>2</td>
+              <td class="duration" data-value="170500000">0.170</td>
+              <td class="duration" data-value="170500000">0.243</td>
+              <td class="duration" data-value="341000000">0.341</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.AmazonStepDefinitions.sonucun_icerdigini_test_eder(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="2358400000">2.358</td>
+              <td class="duration" data-value="2358400000">10.196</td>
+              <td class="duration" data-value="11792000000">11.792</td>
+              <td class="failed">60.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.AmazonStepDefinitions.sonucun_iphone_icerdigini_test_eder()</td>
+              <td>2</td>
+              <td class="duration" data-value="2747500000">2.747</td>
+              <td class="duration" data-value="2747500000">4.165</td>
+              <td class="duration" data-value="5495000000">5.495</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.AmazonStepDefinitions.sonucun_tea_pot_icerdigini_test_eder()</td>
+              <td>2</td>
+              <td class="duration" data-value="9810500000">9.810</td>
+              <td class="duration" data-value="9810500000">13.808</td>
+              <td class="duration" data-value="19621000000">19.621</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.AmazonStepDefinitions.tea_pot_icin_arama_yapar()</td>
+              <td>2</td>
+              <td class="duration" data-value="23500000000">23.500</td>
+              <td class="duration" data-value="23500000000">24.382</td>
+              <td class="duration" data-value="47000000000">47.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.BestbuyStepDefinitions.deOldugunuTestEder(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="102333333">0.102</td>
+              <td class="duration" data-value="102333333">0.163</td>
+              <td class="duration" data-value="307000000">0.307</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.BestbuyStepDefinitions.kullanici_anasayfaya_gider(java.lang.String)</td>
+              <td>8</td>
+              <td class="duration" data-value="14875500000">14.875</td>
+              <td class="duration" data-value="14875500000">42.289</td>
+              <td class="duration" data-value="119004000000">1:59.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.DataTablesStepDefinitions.extention_girer(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="268800000">0.268</td>
+              <td class="duration" data-value="268800000">0.724</td>
+              <td class="duration" data-value="1344000000">1.344</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.DataTablesStepDefinitions.first_name_girer(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="320600000">0.320</td>
+              <td class="duration" data-value="320600000">0.769</td>
+              <td class="duration" data-value="1603000000">1.603</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.DataTablesStepDefinitions.isimBolumundeOldugunuDogrular(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="10073400000">10.073</td>
+              <td class="duration" data-value="10073400000">10.217</td>
+              <td class="duration" data-value="50367000000">50.367</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.DataTablesStepDefinitions.kullaniciIleAramaYapar(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="490000000">0.490</td>
+              <td class="duration" data-value="490000000">1.452</td>
+              <td class="duration" data-value="2450000000">2.450</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.DataTablesStepDefinitions.last_name_girer(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="269400000">0.269</td>
+              <td class="duration" data-value="269400000">0.594</td>
+              <td class="duration" data-value="1347000000">1.347</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.DataTablesStepDefinitions.new_butonuna_basar()</td>
+              <td>5</td>
+              <td class="duration" data-value="403800000">0.403</td>
+              <td class="duration" data-value="403800000">0.678</td>
+              <td class="duration" data-value="2019000000">2.019</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.DataTablesStepDefinitions.office_girer(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="343000000">0.343</td>
+              <td class="duration" data-value="343000000">1.028</td>
+              <td class="duration" data-value="1715000000">1.715</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.DataTablesStepDefinitions.postion_girer(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="333200000">0.333</td>
+              <td class="duration" data-value="333200000">1.030</td>
+              <td class="duration" data-value="1666000000">1.666</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.DataTablesStepDefinitions.salary_girer(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="247400000">0.247</td>
+              <td class="duration" data-value="247400000">0.533</td>
+              <td class="duration" data-value="1237000000">1.237</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.DataTablesStepDefinitions.saniyeBekler(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="1006000000">1.006</td>
+              <td class="duration" data-value="1006000000">1.011</td>
+              <td class="duration" data-value="5030000000">5.030</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.DataTablesStepDefinitions.start_date_girer(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="755600000">0.755</td>
+              <td class="duration" data-value="755600000">1.824</td>
+              <td class="duration" data-value="3778000000">3.778</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Hooks.setUp()</td>
+              <td>21</td>
+              <td class="duration" data-value="809523">0.000</td>
+              <td class="duration" data-value="809523">0.016</td>
+              <td class="duration" data-value="17000000">0.017</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+              <td>21</td>
+              <td class="duration" data-value="5336047619">5.336</td>
+              <td class="duration" data-value="5336047619">14.018</td>
+              <td class="duration" data-value="112057000000">1:52.057</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.WalmartStepDefinitions.kullanici_walmart_ana_sayfaya_gider()</td>
+              <td>4</td>
+              <td class="duration" data-value="27647000000">27.647</td>
+              <td class="duration" data-value="27647000000">40.867</td>
+              <td class="duration" data-value="110588000000">1:50.588</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.WalmartStepDefinitions.walmart_sayfasinda_icin_arama_yapar(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="29919750000">29.919</td>
+              <td class="duration" data-value="29919750000">57.959</td>
+              <td class="duration" data-value="119679000000">1:59.679</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.WalmartStepDefinitions.walmartta_sayfa_basliginin_icerdigini_test_eder(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2291250000">2.291</td>
+              <td class="duration" data-value="2291250000">9.013</td>
+              <td class="duration" data-value="9165000000">9.165</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>28</td>
+            <td>171</td>
+            <td class="duration">5.172</td>
+            <td class="duration">2:39.282</td>
+            <td class="duration">14:44.466</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
