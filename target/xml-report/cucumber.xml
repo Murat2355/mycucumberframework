@@ -1,110 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="9" time="400.017">
-<testcase classname="US1001 amazon page search" name="TC01 amazon arama testi" time="109.838">
-<system-out><![CDATA[Given kullanici amazon anasayfaya gider.....................................passed
-And iphone icin arama yapar.................................................passed
-Then sonucun iphone icerdigini test eder....................................passed
-Given kullanici amazon anasayfaya gider.....................................passed
-And teapot icin arama yapar.................................................passed
-Then sonucun teapot icerdigini test eder....................................passed
-Given kullanici amazon anasayfaya gider.....................................passed
-And flower icin arama yapar.................................................passed
-Then sonucun flower icerdigini test eder....................................passed
-And kullanici sayfayi kapatir...............................................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="7.125">
+<testcase classname="US1015_DBUtils" name="TC_23 Kullanici tHotel tablosundan mail fıeldini okur" time="3.125">
+<system-out><![CDATA[Given kullanici DBUtils ile CK_Hotels veritabanina baglanir.................passed
+And kullanici DBUtils ile "tHotel" tablosundan "Email" verilerini okur......passed
+Then IDHotel degeri 8 olan kaydin Email bilgisinin "new@email" oldugunu test eder.passed
 ]]></system-out>
 </testcase>
-<testcase classname="US1002_amazon_search_background" name="TC02_amazon_iphone_arama_testi" time="42.523">
-<system-out><![CDATA[Given kullanici amazon anasayfaya gider.....................................passed
-And iphone icin arama yapar.................................................passed
-Then sonucun iphone icerdigini test eder....................................passed
-And kullanici sayfayi kapatir...............................................passed
+<testcase classname="US1015_DBUtils" name="TC_24 Kullanici tHotel tablosundan istedigi Emaili ubdate eder" time="1.172">
+<system-out><![CDATA[Given kullanici DBUtils ile CK_Hotels veritabanina baglanir.................passed
+Then IDHotel degeri 3 olan kaydin Email degerini "batch11@javadabulusuruz.com" yapar.passed
 ]]></system-out>
 </testcase>
-<testcase classname="US1002_amazon_search_background" name="TC03_amazon_teapot_arama_testi" time="71.157">
-<system-out><![CDATA[Given kullanici amazon anasayfaya gider.....................................passed
-And teapot icin arama yapar.................................................passed
-Then sonucun teapot icerdigini test eder....................................passed
-And kullanici sayfayi kapatir...............................................passed
+<testcase classname="US1015_DBUtils" name="TC_25 Kullanici tHotel tablosunda update yapar" time="1.125">
+<system-out><![CDATA[Given kullanici DBUtils ile CK_Hotels veritabanina baglanir.................passed
+Then IDHotel degeri 11 olan kaydin Email bilgisini buisbukadar@gmail.com yapar.passed
 ]]></system-out>
 </testcase>
-<testcase classname="US1002_amazon_search_background" name="TC04_amazon_flower_arama_testi" time="25.137">
-<system-out><![CDATA[Given kullanici amazon anasayfaya gider.....................................passed
-And flower icin arama yapar.................................................passed
-Then sonucun flower icerdigini test eder....................................passed
-And kullanici sayfayi kapatir...............................................passed
+<testcase classname="US1015_DBUtils" name="TC_26 Kullanici uygun degerlerle tHotel tablosuna yeni kayit ekler" time="1.172">
+<system-out><![CDATA[Given kullanici DBUtils ile CK_Hotels veritabanina baglanir.................passed
+And uygun degerlerle tabloya yeni kayit ekler...............................passed
 ]]></system-out>
-</testcase>
-<testcase classname="US1003_amazon_search_parametreli" name="TC05_parametre_kullanma" time="19.87">
-<failure message="" type="java.lang.AssertionError"><![CDATA[When kullanici amazon anasayfaya gider......................................passed
-And "hasan" icin arama yapar................................................passed
-Then sonucun "kemal" icerdigini test eder...................................failed
-And kullanici sayfayi kapatir...............................................skipped
-
-StackTrace:
-java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at stepdefinitions.AmazonStepDefinitions.sonucun_icerdigini_test_eder(AmazonStepDefinitions.java:62)
-	at ✽.sonucun "kemal" icerdigini test eder(file:///C:/Users/Casper/IdeaProjects/mycucumberframework/src/test/resources/features/US1003_amazon_search_parametreli.feature:9)
-]]></failure>
-</testcase>
-<testcase classname="US1004_amazon_search_scenario_outline" name="TC06_coklu_arama" time="28.117">
-<system-out><![CDATA[When kullanici amazon anasayfaya gider......................................passed
-Then "yasin" icin arama yapar...............................................passed
-And sonucun "yasin" icerdigini test eder....................................passed
-And kullanici sayfayi kapatir...............................................passed
-]]></system-out>
-</testcase>
-<testcase classname="US1004_amazon_search_scenario_outline" name="TC06_coklu_arama_2" time="24.197">
-<system-out><![CDATA[When kullanici amazon anasayfaya gider......................................passed
-Then "samsung" icin arama yapar.............................................passed
-And sonucun "samsung" icerdigini test eder..................................passed
-And kullanici sayfayi kapatir...............................................passed
-]]></system-out>
-</testcase>
-<testcase classname="US1004_amazon_search_scenario_outline" name="TC06_coklu_arama_3" time="42.633">
-<system-out><![CDATA[When kullanici amazon anasayfaya gider......................................passed
-Then "headphone" icin arama yapar...........................................passed
-And sonucun "headphone" icerdigini test eder................................passed
-And kullanici sayfayi kapatir...............................................passed
-]]></system-out>
-</testcase>
-<testcase classname="US1004_amazon_search_scenario_outline" name="TC06_coklu_arama_4" time="35.865">
-<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class='a-section a-spacing-small a-spacing-top-small']&quot;}&#10;  (Session info: chrome=87.0.4280.88)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'DESKTOP-MBT4DSN', ip: '192.168.1.121', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\Casper\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:53616}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 7c216341a650ab5b5cf4948e263f517c&#10;*** Element info: {Using=xpath, value=//div[@class='a-section a-spacing-small a-spacing-top-small']}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[When kullanici amazon anasayfaya gider......................................passed
-Then "pencil" icin arama yapar..............................................passed
-And sonucun "pencil" icerdigini test eder...................................failed
-And kullanici sayfayi kapatir...............................................skipped
-
-StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='a-section a-spacing-small a-spacing-top-small']"}
-  (Session info: chrome=87.0.4280.88)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-MBT4DSN', ip: '192.168.1.121', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\Casper\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:53616}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 7c216341a650ab5b5cf4948e263f517c
-*** Element info: {Using=xpath, value=//div[@class='a-section a-spacing-small a-spacing-top-small']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy18.getText(Unknown Source)
-	at stepdefinitions.AmazonStepDefinitions.sonucun_icerdigini_test_eder(AmazonStepDefinitions.java:62)
-	at ✽.sonucun "pencil" icerdigini test eder(file:///C:/Users/Casper/IdeaProjects/mycucumberframework/src/test/resources/features/US1004_amazon_search_scenario_outline.feature:9)
-]]></failure>
 </testcase>
 </testsuite>

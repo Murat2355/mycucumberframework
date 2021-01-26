@@ -50,4 +50,15 @@ public class CkHotelsStepDefinitions {
         System.out.println(ckHotelsPage.sifreYanlisYaziElementi.getText());
         Assert.assertTrue(ckHotelsPage.sifreYanlisYaziElementi.getText().contains(ConfigReader.getProperty("Ck_giris_basarisiz_kontol_yazi")));
     }
+
+    @And("username olarak {string} girer")
+    public void usernameOlarakGirer(String userName) {
+        ckHotelsPage.userNameTextBox.sendKeys(userName);
+
+    }
+
+    @And("password olarak {string} girer")
+    public void passwordOlarakGirer(String password) {
+        ckHotelsPage.passwordTextBox.sendKeys(password);
+    }
 }
